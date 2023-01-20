@@ -1,0 +1,237 @@
+:root {
+    --white: #fff;
+    --light: #92CCCD;
+    --lightShadow: #29627e;
+    --medium: #445876;
+    --dark: #31343D;
+    --workWidth: 45%;
+}
+
+/* element styles */
+
+/* Heading and navigation bar */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(var(--medium) 0%, var(--dark) 100%);
+}
+
+h1 {
+    padding: 1% 1% 1% 8%;
+    font-size: 500%;
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 2% 2% 2% 0;
+    border-radius: 0 4px 4px 0;
+}
+
+nav {
+    width: 40%;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+header a {
+    font-size: 125%;
+    color: var(--light);
+    padding: 2%;
+    text-decoration: none;
+    border-bottom: solid var(--light);
+}
+
+sub {
+    padding: 5%;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("../images/binary-code.jpg");
+    color: var(--white);
+    font-size: large;
+    font-weight: bolder;
+}
+
+/* Main content of site, including the asides */
+div {
+    display: flex;
+    margin: 4% 0 4% 0;
+}
+
+aside {
+    width: 25%;
+    padding-right: 2%;
+    margin: 0 2% 0 2%;
+    float: left;
+    border-right: 4px solid var(--lightShadow);
+    color: var(--medium);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+aside h2 {
+    font-size: 400%;
+    text-align: right;
+}
+
+section {
+    width: 75%;
+}
+
+section p {
+    margin: 0 10% 1em 0;
+    line-height: 1.5em;
+}
+
+/* Buttons for the Work secion */
+img {
+    max-width: 100%;
+    border: 2px solid var(--light);
+}
+
+/* Links for the Contact Me section */
+li {
+    display: flex;
+}
+
+footer {
+    position: block;
+    width: 100%;
+    color: var(--light);
+    text-align: center;
+    background-color: var(--dark);
+    padding: 1.5em;
+    background-image: linear-gradient(
+        var(--dark) 0%,
+        var(--medium) 100% );
+}
+
+footer h3 {
+    font-size: 200%;
+}
+
+/* */
+/* class styles */
+/* */
+
+/* Word cards stylization */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    max-width: var(--workWidth);
+    margin: 2%;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.card-header {
+    border: 2px solid var(--light);
+    margin: 10% -100% 10% 0;
+    flex-direction: column;
+    width: var(--workWidth);
+    position: relative;
+    right: 100%;
+    color: var(--white);
+    background-image: linear-gradient(
+          var(--medium) 0%,
+          var(--lightShadow) 100%
+        );
+    border-radius: 0 6px 6px 0;
+}
+
+.card-header h3 {
+    font-size: 150%;
+    margin: 1%;
+}
+
+.card-header p {
+    line-height: 1em;
+    margin: 0 1% 1% 1%;
+}
+
+/* id styles */
+#About-Me img {
+    float: left;
+    margin: 1% 2% 0 0;
+    width: 25%;
+}
+
+#About-Me p {
+    text-align: justify;
+}
+
+
+#Work {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+#first-tile {
+    max-width: 95%;
+}
+
+#Contact-Me, #Resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* Interactive styles */
+
+  .card:hover, .card:hover img {
+    box-shadow: inset 0px 0px 8px var(--lightShadow), 0 0 15px var(--lightShadow);
+    opacity: .85;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        width: 30%;
+        margin: 2%;
+    }
+
+    div {
+        display: block;
+        margin: 2%;
+    }
+    aside {
+        width: 100%;
+        padding-right: 0%;
+        margin: 0 0 2% 0;
+        float: none;
+        border-right: none;
+        border-bottom: 4px solid var(--lightShadow);
+        justify-content: center;
+    }
+    aside h2 {
+        text-align: center;
+    }
+    section {
+        width: 100%;
+    }
+    .card, #first-tile {
+        max-width: 95%;
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    aside h2 {
+        font-size: 300%;
+    }
+    
+    .card, #first-tile {
+        max-width: 90%;
+        margin: 2%;
+    }
+    
+    #About-Me img {
+        width: 50%;
+    }
+}
+
