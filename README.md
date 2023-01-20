@@ -2,7 +2,7 @@
 
 ## Final Deployed Webpage
 
-[Joe Black's Coding Portfolio](https://j03b.github.io/module-challenges/02-Challenge/Joes-portfolio/)
+[Joe Black's Coding Portfolio](https://j03b.github.io/Portfolio/)
 
 ## Description
 
