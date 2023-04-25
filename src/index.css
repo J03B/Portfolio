@@ -1,0 +1,38 @@
+body {
+    background-color: #DAD7CD;
+}
+
+.my-img {
+    clip-path: circle();
+    width: 25%;
+}
+
+@media (max-width: 1280px) {
+    .my-img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .my-img {
+        width: 35%;
+    }
+}
+
+@media (max-width: 812px) {
+    .my-img {
+        width: 40%;
+    }
+}
+
+@media (max-width: 624px) {
+    .my-img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 412px) {
+    .my-img {
+        width: 50%;
+    }
+}
