@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NavTabs({ currentPage, handlePageChange }) {
+function Navigation({ currentPage, handlePageChange }) {
   return (
     <nav class="navbar">
       <div class="container-fluid justify-content-evenly">
@@ -47,4 +47,4 @@ function NavTabs({ currentPage, handlePageChange }) {
   );
 }
 
-export default NavTabs;
+export default Navigation;
