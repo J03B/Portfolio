@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function About() {
   return (
-    <div class="container-fluid">
-      <div class="row align-items-start justify-content-around">
-        <div class="text-center">
+    <div className="container-fluid">
+      <div className="row align-items-start justify-content-around">
+        <div className="text-center">
           <h1>About J03B</h1>
           <p> Full Stack Developer and Technical Engineer</p>
-          <img class="my-img" src='images/profile-picture.jpg' alt='Profile picture of Joe Black in suit and tie with faded tree leaves in the background' />
+          <img className="my-img" src='images/profile-picture.jpg' alt='Profile picture of Joe Black in suit and tie with faded tree leaves in the background' />
         </div>
-        <div class="row gx-5 my-3">
+        <div className="row gx-5 my-3">
           <p>
               My name is Joe Black. Having been at Epic since mid 2021, I have loved making a difference in the world of healthcare. I've had opportunities to work with technical teams, clinical operations, and even hospital executives to aid in optimizing their health care software solutions. I've also enjoyed developing code to find areas to be improved, clean up server objects, and continue to develop solutions to report on critical patient data. 
           </p>
