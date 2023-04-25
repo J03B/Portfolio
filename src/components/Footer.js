@@ -3,9 +3,9 @@ import React from "react";
 function Footer() {
   return (
     <div>
-        <footer class="lead">
-            <div class="container">
-                <div class="container-fluid">
+        <footer className="lead">
+            <div className="container">
+                <div className="container-fluid">
                     <p>
                         <strong>My Full Stack Development Portfolio</strong> - a React site by{" "}
                         <a href="https://github.com/J03B" target="_blank" rel="noreferrer">
