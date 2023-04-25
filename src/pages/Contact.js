@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
-import { validateEmail } from '../../utils/helpers';
+import { validateEmail } from '../utils/helpers';
 
 function Contact() {
   const [state, handleSubmit] = useForm("jmbContact123");
