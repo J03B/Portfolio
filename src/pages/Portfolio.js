@@ -11,6 +11,14 @@ export default function Portfolio() {
         imgAlt: 'yeal yucca plant bird-eye view as it begins blooming'
     },
     {
+        projectTitle: 'Story Seeker',
+        projectDescription: 'An Interactive Google Books API search engine. Use it to save books to your personal user account.',
+        projectLink: 'https://story-seek.herokuapp.com/',
+        projectLinkPhrase: 'Read Books!',
+        imgSrc: './images/story-seeker.png',
+        imgAlt: 'screenshot of the application in mid-book search over key-word Thrawn.'
+    },
+    {
         projectTitle: 'No Mercy Trivia',
         projectDescription: 'A fun, interactive trivia game implementing numerous server side APIs, compiling multiple sources into one, user-friendly game.',
         projectLink: 'https://j03b.github.io/no-mercy-trivia/',
