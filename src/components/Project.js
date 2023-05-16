@@ -8,7 +8,7 @@ export default function Project(props) {
                 <div className="card-body">
                     <h5 className="card-title">{item.projectTitle}</h5>
                     <p className="card-text">{item.projectDescription}</p>
-                    <a href={item.projectLink} className="btn btn-primary">{item.projectLinkPhrase}</a>
+                    <a href={item.projectLink} target="_blank" className="btn btn-primary">{item.projectLinkPhrase}</a>
                 </div>
             </div>
         </div>
