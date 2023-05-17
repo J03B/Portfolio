@@ -6,7 +6,7 @@ export default function Resume() {
             <div className="container-fluid row">
                 <div class="col">
                     <h3>Resume</h3>
-                    <a class="btn btn-success" href="./assets/files/Joe_Black_Resume.pdf" download>Click here to download my current Resume.</a>
+                    <a class="btn btn-success" href="./assets/files/Joseph_Black_Resume_TwoPage_5_16_23.pdf" download>Click here to download my current Resume.</a>
                 </div>
 
                 <div class="col">
