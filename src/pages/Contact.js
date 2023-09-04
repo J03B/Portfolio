@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
+import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
 
 function Contact() {
@@ -9,7 +10,7 @@ function Contact() {
   const { name, email, message } = formState;
 
   const handleChange = (e) => {
-    if (e.target.dataName === 'email') {
+    if (e.target.dataset.name === "email") {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
         setErrorMessage('Your email is invalid.');
@@ -25,7 +26,6 @@ function Contact() {
     }
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.dataset.name]: e.target.value });
-      console.log('Handle Form', formState);
     }
   };
 
@@ -33,7 +33,11 @@ function Contact() {
     e.preventDefault();
 
     console.log(formState);
-    if (formState.name && validateEmail(formState.email) && formState.message) {
+    if (formState.name.length && validateEmail(formState.email) && formState.message.length) {
+      console.log("Sending the form response to Joe Black");
+      var formSub = document.getElementById('contact-form');
+      formSub.action = `https://docs.google.com/forms/d/e/1FAIpQLSciRHXRRAdRnU5jiLGr9ieheCjZ2-U2CKI0I70zR1NheHCxQg/formResponse?usp=pp_url&entry.1026203063=${formState.name}&entry.271297233=${formState.email}&entry.1585354681=${formState.message}`;
+      formSub.submit();
       return true;
     }
     setErrorMessage('Please fill out the form before submitting.');
@@ -48,7 +52,7 @@ function Contact() {
         <p className="display-6">Contact Me</p>
         <hr />
 
-        <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSciRHXRRAdRnU5jiLGr9ieheCjZ2-U2CKI0I70zR1NheHCxQg/formResponse" onSubmit={handleFormSubmit}>{/*onSubmit={handleSubmit}>*/}
+        <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSciRHXRRAdRnU5jiLGr9ieheCjZ2-U2CKI0I70zR1NheHCxQg/formResponse?usp=pp_url" onSubmit={handleFormSubmit}>{/*onSubmit={handleSubmit}>*/}
           <div className="mb-3">
             <label className="form-label" htmlFor="entry.1026203063">Name*</label>
             <input className="form-control" type="text" name="entry.1026203063" data-name="name" defaultValue={name} onBlur={handleChange} />
@@ -67,7 +71,7 @@ function Contact() {
               {errorMessage}
             </Alert>
           )}
-          <button className="btn btn-primary mb-3" type="submit">Submit</button>
+          <Button variant='contained' className="btn btn-primary mb-3" type="Submit">Submit</Button>
         </form>
 
         <hr />

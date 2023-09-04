@@ -2,6 +2,7 @@ import React from "react";
 import Project from "../components/Project";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
 export default function Portfolio() {
   const projects = [
@@ -50,7 +51,7 @@ export default function Portfolio() {
     {
       projectTitle: "Weather Dashboard",
       projectDescription:
-        "Created custom Portal to pull in the forecast for any searchable city.",
+        "Customized weather portal to pull in the 5-day forecast for any searchable city.",
       projectLink: "https://j03b.github.io/weather-dashboard/",
       projectGitHub: "https://github.com/J03B/weather-dashboard",
       projectLinkPhrase: "Search Weather",
@@ -73,7 +74,14 @@ export default function Portfolio() {
 
   return (
     <Container sx={{ mb: 4 }}>
-      <Stack sx={{ display: 'inline-flex' }} direction="row" flexWrap="wrap" justifyContent="center" gap={4}>
+      <Typography variant="h3" sx={{mb: 2}} align="center" >My Portfolio</Typography>
+      <Stack
+        sx={{ display: "inline-flex" }}
+        direction="row"
+        flexWrap="wrap"
+        justifyContent="center"
+        gap={4}
+      >
         <Project myProjects={projects} />
       </Stack>
     </Container>
